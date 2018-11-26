@@ -1,4 +1,4 @@
-package concurrencia
+package MCampanella.concurrencia
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
