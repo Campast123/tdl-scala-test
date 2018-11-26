@@ -6,14 +6,14 @@ import scala.util.Success
 
 //Paradoja de los hermanos
 object FutureDilemaDeLosHermanosTest extends App {
-  println("Pepe: Juan vas a comprar al chino asi me quedo estudiando?")
-  println("Juan: Dale, pero vos cocinas.. Ya voy..")
+  println("Pepe: Vamos a comer? yo cocino")
+  println("Juan: Dale, pero esperame que termine de hacer el TP de TDL")
   val f = Future {
-    println("Juan va al chino")
+    println("Juan agrega diapos al TP")
     Thread.sleep(1000)
-    println("Juan vuelve del chino")
+    println("Juan termina el TP")
   }
-  println("Pepe se queda estudiando")
+  println("Pepe se queda viendo tele")
   Thread.sleep(1000)
   f.onComplete{
     case Success(n) => println("Pepe empieza a cocinar")
