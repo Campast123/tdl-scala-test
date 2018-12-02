@@ -1,8 +1,9 @@
 package MCampanella.concurrencia
 
-import scala.concurrent.Future
+import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.Success
+import scala.concurrent.duration._
 
 //Paradoja de los hermanos
 object FutureDilemaDeLosHermanosTest extends App {
@@ -14,7 +15,7 @@ object FutureDilemaDeLosHermanosTest extends App {
     println("Juan termina el TP")
   }
   println("Pepe se queda viendo tele")
-  Thread.sleep(1000)
+  Await.result(f, 1 minutes)
   f.onComplete{
     case Success(n) => println("Pepe empieza a cocinar")
   }
