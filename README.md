@@ -50,6 +50,7 @@ and yet another line' http://localhost:8080/contrib/Michael
 ~$ curl -X GET http://localhost:8080/shutdown/shutdown
 ```
 Aclaracion:
+
     El servicio .../join/{Nombre} se usa para incorporar una nueva persona al chat.
     El servicio .../contrib/{Nombre} con el valor "data" con un mensaje, se usa para escribir en el chat.
     El servicio .../poll/{Nombre}
